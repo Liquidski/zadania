@@ -31,7 +31,7 @@ function znajdzMinMax() {
     const wynik = document.getElementById("wynik");
 
   
-    if(isNaN(a)  isNaN(c)){
+    if(isNaN(a) || isNaN(b) || isNaN(c)){
         wynik.textContent = "Proszę wpisać wszystkie trzy liczby!";
         return;
     }
