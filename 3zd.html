@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zamiana pierwszych liter</title>
+</head>
+<body>
+
+<h2>Zamiana pierwszych liter w słowach</h2>
+
+<label>Słowo 1:</label>
+<input type="text" id="slowo1"><br><br>
+
+<label>Słowo 2:</label>
+<input type="text" id="slowo2"><br><br>
+
+<button onclick="zamienLitery()">Zamień pierwsze litery</button>
+
+<p id="wynik"></p>
+
+<script>
+function zamienLitery() {
+   
+    let s1 = document.getElementById("slowo1").value;
+    let s2 = document.getElementById("slowo2").value;
+
+
+    if(s1.length === 0 || s2.length === 0){
+        document.getElementById("wynik").textContent = "Proszę wpisać oba słowa!";
+        return;
+    }
+
+  
+    let pierwsza1 = s1[0];        
+    let reszta1 = s1.slice(1);    
+    let pierwsza2 = s2[0];        
+    let reszta2 = s2.slice(1);    
+    let noweS1 = pierwsza2 + reszta1;
+    let noweS2 = pierwsza1 + reszta2;
+
+  
+    document.getElementById("wynik").textContent = noweS1 + " " + noweS2;
+}
+</script>
+
+</body>
+</html>
