@@ -5,18 +5,15 @@ function obliczPole() {
 
     let wynik = document.getElementById("wynik");
 
-    if (a + b <= c  b + c <= a) {
+    if (a + b <= c || a + c <= b || b + c <= a) {
         wynik.textContent = "Z podanych boków nie sposób utworzyć trójkąta!";
-        return; 
+        return;
     }
 
     let s = (a + b + c) / 2;
-
-   
     let pole = Math.sqrt(s * (s - a) * (s - b) * (s - c));
 
     wynik.textContent = "Pole trójkąta wynosi: " + pole.toFixed(4);
-    
 }
 
 let obliczButton = document.getElementById('obliczButton');
